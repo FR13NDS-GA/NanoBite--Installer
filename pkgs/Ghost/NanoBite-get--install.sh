@@ -43,7 +43,7 @@ read cmdline
 
 if [ $cmdline == "Ghost--Seeker" ]; then
     clear
-    python3 main.py
+    python3 ~/Documents/Ghost/main.py
 elif [ $cmdline == "Ghost" ]; then
     clear
     echo "Welcome to Ghost Seeker!"

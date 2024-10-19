@@ -1,11 +1,25 @@
-if [ -z "$1" ]; then
-  echo "Usage: $0 <cmdline>"
-  exit 1
+#!/bin/bash
+
+# Check if script is run with at least one argument
+if [ $# -eq 0 ]; then
+    echo "No arguments provided. Please provide the necessary parameters."
+    exit 1
 fi
 
-cmdline=$1
+# Read and display the command-line arguments
+echo "You ran this script with the following command-line arguments:"
+for arg in "$@"; do
+    echo "$arg"
+done
 
-if [ $cmdline == "NanoBite-get--install__Ghost" ]; then
+# Example of further usage of command-line arguments
+# This could be software installation, configuration, or any other task
+echo "Installing software with the provided arguments..."
+
+# Simulating software installation
+echo "Installation complete!"
+
+if [ $arg == "Ghost" ]; then
   chmod +x ~/Documents/NanoBite--Installer/pkgs/Ghost/NanoBite-get--install.sh
   ./~/Documents/NanoBite--Installer/pkgs/Ghost/NanoBite-get--install.sh
 else

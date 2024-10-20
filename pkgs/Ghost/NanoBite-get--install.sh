@@ -8,7 +8,7 @@ echo "Installing Ghost Seeker Toolkit pkgs..."
 
 # Variables for repository URL and target directory
 REPO_URL="https://github.com/FR13NDS-GA/Ghost.git"
-TARGET_DIR="~/Documents"
+TARGET_DIR="$HOME/Documents"
 
 # Check if target directory exists, if not, create it
 if [ ! -d "$TARGET_DIR" ]; then

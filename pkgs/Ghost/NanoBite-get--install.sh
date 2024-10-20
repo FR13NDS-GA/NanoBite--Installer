@@ -32,6 +32,7 @@ echo "Repository cloned into $TARGET_DIR."
 filename="Ghost_Exe.sh"
 cat <<EOL > $filename
 # Ghost cmd execution script
+clear
 
 echo "Welcome to Ghost Seeker!"
 echo ""

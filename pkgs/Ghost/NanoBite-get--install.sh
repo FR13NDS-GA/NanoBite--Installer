@@ -6,7 +6,7 @@ echo "Installing Ghost Seeker Toolkit pkgs..."
 
 # Variables for repository URL and target directory
 REPO_URL="https://github.com/FR13NDS-GA/Ghost.git"
-TARGET_DIR="$HOME/Documents"
+TARGET_DIR="/home/kali/Documents"
 
 # Check if target directory exists, if not, create it
 if [ ! -d "$TARGET_DIR" ]; then
@@ -45,7 +45,7 @@ read cmdline
 
 if [[ "\$cmdline" == "Ghost--Seeker" ]]; then
     clear
-    sudo python3 $HOME/Documents/Ghost/main.py
+    sudo python3 /home/kali/Documents/Ghost/main.py
 elif [[ "\$cmdline" == "Ghost" ]]; then
     clear
     echo "Welcome to Ghost Seeker!"
@@ -87,6 +87,8 @@ sudo apt install -y traceroute
 
 echo "Installing DNS utilities..."
 sudo apt install -y dnsutils
+
+sudo chmod +x /home/kali/Documents/Ghost/email_info.sh
 
 # Notify the user of completion
 echo "Installation Complete!"

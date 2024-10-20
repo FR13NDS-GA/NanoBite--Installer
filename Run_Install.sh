@@ -21,7 +21,7 @@ echo "Installation complete!"
 
 if [ $arg == "Ghost" ]; then
   chmod +x /usr/local/bin/NanoBite--Installer/pkgs/Ghost/NanoBite-get--install.sh
-  ./usr/local/bin/NanoBite--Installer/pkgs/Ghost/NanoBite-get--install.sh
+  .//usr/local/bin/NanoBite--Installer/pkgs/Ghost/NanoBite-get--install.sh
 else
   echo "error! pkg does not exist"
 fi

@@ -66,8 +66,11 @@ fi
 
 EOL
 
-# Make the tool executable using the Ghost cmd
+# Move the script to /usr/local/bin
 sudo mv Ghost_Exe.sh /usr/local/bin/Ghost
+
+# Make the Ghost script executable
+sudo chmod +x /usr/local/bin/Ghost
 
 #! Installing libs/dependancies
 # Install the required packages

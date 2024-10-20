@@ -89,6 +89,11 @@ echo "Installing DNS utilities..."
 sudo apt install -y dnsutils
 
 sudo chmod +x /home/kali/Documents/Ghost/email_info.sh
+sudo chmod +x /home/kali/Documents/Ghost/ip_lookup.sh
+sudo chmod +x /home/kali/Documents/Ghost/main.sh
+sudo chmod +x /home/kali/Documents/Ghost/person_info.sh
+sudo chmod +x /home/kali/Documents/Ghost/nmap.sh
+sudo chmod +x /home/kali/Documents/Ghost/sherlock.sh
 
 # Notify the user of completion
 echo "Installation Complete!"

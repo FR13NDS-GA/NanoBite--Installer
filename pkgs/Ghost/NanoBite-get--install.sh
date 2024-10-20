@@ -41,10 +41,10 @@ echo "To start Seeker, run this cmd: Ghost--Seeker"
 echo ""
 read cmdline
 
-if [ $cmdline == "Ghost--Seeker" ]; then
+if [[ "\$cmdline" == "Ghost--Seeker" ]]; then
     clear
     python3 ~/Documents/Ghost/main.py
-elif [ $cmdline == "Ghost" ]; then
+elif [[ "\$cmdline" == "Ghost" ]]; then
     clear
     echo "Welcome to Ghost Seeker!"
     echo ""
@@ -55,12 +55,11 @@ elif [ $cmdline == "Ghost" ]; then
     echo "To start Seeker, run this cmd: Ghost--Seeker"
     echo ""
     read cmdline
-elif [ $cmdline == "/q" ]; then
-      echo "Exiting..."
-      clear
+elif [[ "\$cmdline" == "/q" ]]; then
+    echo "Exiting..."
+    clear
 else
-      echo "Error! Invalid Command!"
-
+    echo "Error! Invalid Command!"
 fi
 
 

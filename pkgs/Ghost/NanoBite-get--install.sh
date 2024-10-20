@@ -1,8 +1,6 @@
 #!/bin/bash
 
-#!Install using NanoBite
-
-# Install OSINT ~/Ghost Toolkit
+# Install OSINT ~/Ghost Toolkit using NanoBite
 
 echo "Installing Ghost Seeker Toolkit pkgs..."
 
@@ -23,10 +21,14 @@ cd "$TARGET_DIR"
 echo "Cloning the repository $REPO_URL into $TARGET_DIR..."
 git clone "$REPO_URL"
 
+# Fix permissions for the cloned repository to avoid permission errors
+echo "Setting permissions for $TARGET_DIR/Ghost..."
+chmod -R 755 "$TARGET_DIR/Ghost"
+
 # Output success message
 echo "Repository cloned into $TARGET_DIR."
 
-
+# Create the Ghost_Exe.sh script
 filename="Ghost_Exe.sh"
 cat <<EOL > $filename
 # Ghost cmd execution script
@@ -62,17 +64,15 @@ else
     echo "Error! Invalid Command!"
 fi
 
-
 EOL
 
-# Move the script to /usr/local/bin
+# Move the script to /usr/local/bin for system-wide access
 sudo mv Ghost_Exe.sh /usr/local/bin/Ghost
 
 # Make the Ghost script executable
 sudo chmod +x /usr/local/bin/Ghost
 
-#! Installing libs/dependancies
-# Install the required packages
+# Install required packages
 echo "Installing whois..."
 sudo apt install -y whois
 
@@ -88,8 +88,6 @@ sudo apt install -y traceroute
 echo "Installing DNS utilities..."
 sudo apt install -y dnsutils
 
-#! Notify the user of completion
-
-echo "Instillation Complete!"
-echo "Ghost Seeker Toolkit is installed, Run it using this command: Ghost"
-
+# Notify the user of completion
+echo "Installation Complete!"
+echo "Ghost Seeker Toolkit is installed. Run it using the command: Ghost"
